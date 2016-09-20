@@ -33,6 +33,33 @@ Here is a list of websites where you can practice Selenium webdriver. You will f
 
 --
 
+## Pre-requisites
+
+Go Dependencies via [Godep](https://github.com/tools/godep)
+```bash
+$ go get github.com/tools/godep
+```
+
+For Mac OS X (using Homebrew):
+```bash
+$ brew install phantomjs
+$ brew install chromedriver
+$ brew install selenium-server-standalone
+```
+
+For Arch Linux user (using Pacman/Yaourt):
+```bash
+$ yaourt -S selenium-server-standalone
+$ yaourt -S chromedriver
+```
+
+Clone the git repo:
+```bash
+$ go get github.com/sayems/golang.webdriver
+```
+
+--
+
 #### Setup IntelliJ IDEA
 
 ```
