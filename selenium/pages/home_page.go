@@ -1,6 +1,8 @@
 package pages
 
-import "time"
+import (
+	"time"
+)
 
 type HomePage struct {
 	Page Page
@@ -10,13 +12,13 @@ var (
 	account = "#header > div > div:nth-of-type(2) > a:nth-of-type(3) > span:nth-of-type(2)"
 	myAccount = "#header-account > div > ul > li:nth-of-type(1) > a"
 	womenTab = "#nav > ol > li:nth-of-type(1) > a"
-	womenPantAndDenim = "#nav > ol > li:nth-of-type(1) > ul > li:nth-of-type(4) > a"
+	viewAllWomen = "#nav > ol > li:nth-of-type(1) > ul > li:nth-of-type(1) > aa"
 
 )
 
 func (s *HomePage) GoToAccountPage() *AccountPage {
-	s.Page.FindByCss(account).Click()
-	s.Page.FindByCss(myAccount).Click()
+	s.Page.FindElementByCss(account).Click()
+	s.Page.FindElementByCss(myAccount).Click()
 	return &AccountPage{Page:s.Page}
 }
 
@@ -27,8 +29,7 @@ func (s *HomePage) GoToMenPage() *MenPage {
 func (s *HomePage) GoToWomenPage() *WomenPage {
 	s.Page.MouseHoverToElement(womenTab)
 	time.Sleep(time.Millisecond * 100)
-	s.Page.FindByCss(womenPantAndDenim).Click()
-	time.Sleep(time.Millisecond * 5000)
+	s.Page.FindElementByCss(viewAllWomen).Click()
 	return &WomenPage{Page:s.Page}
 }
 

@@ -18,12 +18,12 @@ var (
 )
 
 func (s *RegisterPage) Register() *AccountPage {
-	s.Page.FindById(firstName).SendKeys("Test")
-	s.Page.FindById(lastName).SendKeys("Automation")
-	s.Page.FindById(emailAddress).SendKeys(random(10) + "@automation.com")
-	s.Page.FindById(password).SendKeys("Passw0rd!")
-	s.Page.FindById(confirmPassword).SendKeys("Passw0rd!")
-	s.Page.FindByCss(registerButton).Click()
+	s.Page.FindElementById(firstName).SendKeys("Test")
+	s.Page.FindElementById(lastName).SendKeys("Automation")
+	s.Page.FindElementById(emailAddress).SendKeys(random(10) + "@automation.com")
+	s.Page.FindElementById(password).SendKeys("Passw0rd!")
+	s.Page.FindElementById(confirmPassword).SendKeys("Passw0rd!")
+	s.Page.FindElementByCss(registerButton).Click()
 	return &AccountPage{Page:s.Page}
 }
 

@@ -8,6 +8,8 @@ import (
 func TestWomenPage(t *testing.T) {
 
 	login := pages.HomePage{Page:page}
-	login.GoToWomenPage()
+	login.GoToWomenPage().
+		SelectPantsAndDenim().
+		AddProduct()
 
 }

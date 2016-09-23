@@ -9,6 +9,6 @@ var (
 )
 
 func (s *AccountPage) CreateAnAccount() *RegisterPage {
-	s.Page.FindByCss(createAnAccount).Click()
+	s.Page.FindElementByCss(createAnAccount).Click()
 	return &RegisterPage{Page:s.Page}
 }
