@@ -13,7 +13,7 @@ type CategoryPage struct {
 	Page Page
 }
 
-func (s *CategoryPage) AddProduct() *ProductPage{
+func (s *CategoryPage) SelectProduct() *ProductPage{
 	productList := s.Page.FindElementsByCss(listOfProduct)
 	productList[rand.Intn(len(productList))].Click()
 	time.Sleep(time.Millisecond * 5000)

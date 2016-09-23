@@ -12,7 +12,7 @@ var (
 	account = "#header > div > div:nth-of-type(2) > a:nth-of-type(3) > span:nth-of-type(2)"
 	myAccount = "#header-account > div > ul > li:nth-of-type(1) > a"
 	womenTab = "#nav > ol > li:nth-of-type(1) > a"
-	viewAllWomen = "#nav > ol > li:nth-of-type(1) > ul > li:nth-of-type(1) > aa"
+	viewAllWomen = "#nav > ol > li:nth-of-type(1) > ul > li:nth-of-type(1) > a"
 
 )
 

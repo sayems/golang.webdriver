@@ -9,7 +9,8 @@ func TestWomenPage(t *testing.T) {
 
 	login := pages.HomePage{Page:page}
 	login.GoToWomenPage().
-		SelectPantsAndDenim().
-		AddProduct()
+		SelectCategory().
+		SelectProduct().
+		AddProductToCart()
 
 }
