@@ -1,4 +1,4 @@
-package main
+package tests
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"os"
 	"github.com/tebeka/selenium"
 	"fmt"
-	"github.com/sayems/golang.examples/selenium/pages"
+	"github.com/sayems/golang.webdriver/selenium/pages"
 )
 
 var driver selenium.WebDriver

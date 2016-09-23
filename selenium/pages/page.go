@@ -50,4 +50,10 @@ func (s *Page) FindByCss(locator string) selenium.WebElement {
 	return element
 }
 
+func (s *Page) MouseHoverToElement(locator string) selenium.WebElement {
+	element, _ := s.Driver.FindElement(selenium.ByCSSSelector, locator)
+	element.MoveTo(0, 0)
+	return element
+}
+
 

@@ -5,11 +5,9 @@ import (
 	"github.com/sayems/golang.webdriver/selenium/pages"
 )
 
-func TestSelenium(t *testing.T) {
+func TestWomenPage(t *testing.T) {
 
 	login := pages.HomePage{Page:page}
-	login.GoToAccountPage().
-		CreateAnAccount().
-		Register()
+	login.GoToWomenPage()
 
 }
